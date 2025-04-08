@@ -38,3 +38,6 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/usuarios', [UserController::class, 'index']);
 Route::put('/usuarios/{id}', [UserController::class, 'update']);
 Route::delete('/usuarios/{id}', [UserController::class, 'destroy']);
+
+// Ruta para recuperar contraseña
+Route::post('/password/email', [LoginController::class, 'sendResetLinkEmail']);
